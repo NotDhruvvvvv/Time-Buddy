@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeBuddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <div id="clock"></div>
+            <div id="motivational-msg"></div>
+            <div id="daily-quote" class="daily-quote"></div>
+            <div id="mini-calendar" class="mini-calendar"></div>
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="task-container">
+            <h1>TimeBuddy</h1>
+            <div class="project">
+                <h2>Current Project</h2>
+                <input type="text" id="project-name" placeholder="Enter project name">
+            </div>
+            <div class="task">
+                <h2>Tasks</h2>
+                <input type="text" id="task-name" placeholder="Enter task name">
+                <input type="number" id="task-time" placeholder="Enter time (minutes)">
+                <button onclick="addTask()">Add Task</button>
+                <div class="tabs">
+                    <button onclick="filterTasks('all')">All</button>
+                    <button onclick="filterTasks('completed')">Completed</button>
+                    <button onclick="filterTasks('remaining')">Remaining</button>
+                    <button onclick="filterTasks('ongoing')">Ongoing</button>
+                </div>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+    </div>
+    <audio id="alert-sound" src="alert-sound.mp3"></audio>
+    <script src="main.js"></script>
+</body>
+</html>
